@@ -1,0 +1,27 @@
+// ==========================================================================
+// Main SCSS - FLOCSS Architecture
+// ==========================================================================
+
+// --- Foundation ---
+@use "foundation/reset";
+@use "foundation/base";
+
+// --- Layout ---
+@use "layout/l-header";
+@use "layout/l-section";
+@use "layout/l-footer";
+
+// --- Object - Component ---
+@use "object/component/c-heading";
+@use "object/component/c-button";
+@use "object/component/c-text-reveal";
+
+// --- Object - Project ---
+@use "object/project/p-loading";
+@use "object/project/p-mv";
+@use "object/project/p-about";
+@use "object/project/p-work";
+@use "object/project/p-contact";
+
+// --- Object - Utility ---
+@use "object/utility/u-utility";

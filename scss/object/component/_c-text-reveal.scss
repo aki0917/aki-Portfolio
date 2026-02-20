@@ -1,0 +1,38 @@
+// ==========================================================================
+// Component - Text Reveal (GSAP animation target)
+// ==========================================================================
+
+.c-text-reveal {
+  overflow: hidden;
+  display: inline-block;
+
+  &__inner {
+    display: inline-block;
+    transform: translateY(100%);
+    will-change: transform;
+  }
+
+  &.is-revealed &__inner {
+    transform: translateY(0);
+  }
+}
+
+.c-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: opacity, transform;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.c-line-draw {
+  width: 0;
+  will-change: width;
+
+  &.is-drawn {
+    width: 100%;
+  }
+}

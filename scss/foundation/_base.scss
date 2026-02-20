@@ -1,0 +1,50 @@
+// ==========================================================================
+// Foundation - Base
+// ==========================================================================
+
+// --- Variables ---
+$color-black: #111;
+$color-white: #fff;
+$color-gray: #888;
+$color-light-gray: #f5f5f5;
+$color-border: #ddd;
+
+$font-en: "Inter", "Helvetica Neue", Arial, sans-serif;
+$font-ja: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+$breakpoint-sp: 768px;
+$breakpoint-tab: 1024px;
+
+$header-height: 80px;
+$section-padding: 12rem;
+$section-padding-sp: 8rem;
+
+$transition-base: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+// --- Mixins ---
+@mixin sp {
+  @media screen and (max-width: $breakpoint-sp) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width: $breakpoint-tab) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// --- Selection ---
+::selection {
+  background-color: $color-black;
+  color: $color-white;
+}

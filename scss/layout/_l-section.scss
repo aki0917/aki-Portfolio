@@ -1,0 +1,35 @@
+// ==========================================================================
+// Layout - Section
+// ==========================================================================
+@use "../foundation/base" as *;
+
+.l-section {
+  position: relative;
+  padding: $section-padding 4rem;
+
+  @include sp {
+    padding: $section-padding-sp 2rem;
+  }
+
+  &--dark {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &--light {
+    background-color: $color-white;
+    color: $color-black;
+  }
+
+  &--full {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.l-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}

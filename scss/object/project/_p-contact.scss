@@ -1,0 +1,144 @@
+// ==========================================================================
+// Project - Contact
+// ==========================================================================
+@use "../../foundation/base" as *;
+
+.p-contact {
+  text-align: center;
+
+  &__title {
+    font-size: clamp(4rem, 8vw, 10rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+  }
+
+  &__desc {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: $color-gray;
+    max-width: 56rem;
+    margin: 0 auto 4.8rem;
+
+    @include sp {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__form {
+    max-width: 64rem;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  &__form-group {
+    margin-bottom: 2.4rem;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1.6rem 0;
+    border-bottom: 1px solid $color-border;
+    background: transparent;
+    color: $color-black;
+    transition: border-color $transition-base;
+
+    &::placeholder {
+      color: #bbb;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+    }
+
+    &:focus {
+      border-color: $color-black;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 14rem;
+    border: none;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1.6rem 3.2rem;
+    border: 1px solid $color-black;
+    background: transparent;
+    color: $color-black;
+    cursor: pointer;
+    margin-top: 1.6rem;
+    transition: background-color $transition-base, color $transition-base;
+
+    @include sp {
+      font-size: 1.2rem;
+      padding: 1.4rem 2.4rem;
+    }
+
+    @include hover {
+      background-color: $color-black;
+      color: $color-white;
+
+      .p-contact__submit-arrow {
+        width: 2.8rem;
+      }
+    }
+  }
+
+  &__submit-text {
+    display: inline-block;
+  }
+
+  &__submit-arrow {
+    width: 2rem;
+    height: 1px;
+    background-color: currentColor;
+    position: relative;
+    transition: width $transition-base;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-right: 1px solid currentColor;
+      border-top: 1px solid currentColor;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+    margin-top: 6.4rem;
+  }
+
+  &__social-link {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-gray;
+    position: relative;
+    transition: color $transition-base;
+
+    @include hover {
+      color: $color-black;
+    }
+  }
+}
