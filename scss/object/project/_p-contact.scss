@@ -121,6 +121,121 @@
     }
   }
 
+  // --- Contact Form 7 Overrides ---
+  .wpcf7 {
+    max-width: 64rem;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      font-size: 1.5rem;
+      line-height: 1.8;
+      padding: 1.6rem 0;
+      border: none;
+      border-bottom: 1px solid $color-border;
+      background: transparent;
+      color: $color-black;
+      outline: none;
+      transition: border-color $transition-base;
+
+      &::placeholder {
+        color: #bbb;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+      }
+
+      &:focus {
+        border-color: $color-black;
+      }
+    }
+
+    textarea {
+      width: 100%;
+      font-size: 1.5rem;
+      line-height: 1.8;
+      padding: 1.6rem 0;
+      border: none;
+      border-bottom: 1px solid $color-border;
+      background: transparent;
+      color: $color-black;
+      outline: none;
+      resize: vertical;
+      min-height: 14rem;
+      transition: border-color $transition-base;
+
+      &::placeholder {
+        color: #bbb;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+      }
+
+      &:focus {
+        border-color: $color-black;
+      }
+    }
+  }
+
+  .wpcf7-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1.6rem 3.2rem;
+    border: 1px solid $color-black;
+    background: transparent;
+    color: $color-black;
+    cursor: pointer;
+    margin-top: 1.6rem;
+    transition: background-color $transition-base, color $transition-base;
+
+    @include sp {
+      font-size: 1.2rem;
+      padding: 1.4rem 2.4rem;
+    }
+
+    @include hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+
+  .wpcf7-spinner {
+    display: none;
+  }
+
+  .wpcf7-response-output {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    padding: 1.2rem 1.6rem;
+    border-radius: 4px;
+  }
+
+  .wpcf7-form.sent .wpcf7-response-output {
+    border-color: #46b450;
+    color: #46b450;
+  }
+
+  .wpcf7-form.invalid .wpcf7-response-output,
+  .wpcf7-form.failed .wpcf7-response-output {
+    border-color: #dc3232;
+    color: #dc3232;
+  }
+
+  .wpcf7-not-valid-tip {
+    font-size: 1.2rem;
+    color: #dc3232;
+    margin-top: 0.4rem;
+  }
+
   &__social {
     display: flex;
     justify-content: center;

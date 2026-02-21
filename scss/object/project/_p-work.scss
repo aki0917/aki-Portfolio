@@ -66,6 +66,20 @@
     }
   }
 
+  &__auth-memo {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    padding: 0.4rem 1rem;
+    background-color: rgba($color-black, 0.7);
+    color: $color-white;
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
   &__info {
     display: flex;
     justify-content: space-between;
